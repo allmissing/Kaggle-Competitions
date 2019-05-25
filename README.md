@@ -18,3 +18,5 @@ kaggle竞赛入坑
  
  官方提示：给出训练集标注的label可能包含一些噪声，数据集中问题的分布不应被视为代表Quora上提出的问题分布。
 这部分是因为采用了最终数据集的采样程序和脱敏（sanitization ，不知道是不是可以这么理解）措施的组合。
+
+## Jigsaw Unintended Bias in Toxicity Classification
