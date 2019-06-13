@@ -10,10 +10,11 @@
 ### Bias AUCs
 将数据集依据每个identity划分为三个特定子集，每个子集描述unintended bias的一个方面。
 ##### 1.Subgroup AUC
-将数据集提及摸一种身份的划分为一组，这个指标说明对特定身份的预测能力差。
+将数据集提及某一种身份的划分为一组，这个指标说明对特定身份的预测能力差。  
+身份包括：identity_columns = ['male', 'female', 'homosexual_gay_or_lesbian', 'christian', 'jewish', 'muslim', 'black', 'white', 'psychiatric_or_mental_illness']  
 ##### 2.BPSN (Background Positive, Subgroup Negative) AUC
 将测试集限制为提及身份的无毒示例和不具有该身份的有毒示例。
 该指标中的低值意味着该模型混淆了无毒的例子，这些例子提到了与不具有毒性的例子的同一性，可能意味着该模型预测的毒性得分高于提及该身份的无毒例子的毒性得分。
 ##### 3.BNSP (Background Negative, Subgroup Positive) AUC
 在这里，我们将测试集限制为提及身份的有毒示例和不具有该身份的无毒示例。
-这里的低值意味着该模型混淆了有毒的例子，这些例子提到了不具有毒性的非毒性实例，可能意味着该模型预测毒性得分低于提及该身份的有毒例子。
+这里的低值意味着该模型混淆了有毒的例子，这些例子提到了不具有该身份的非毒性实例，可能意味着该模型预测毒性得分低于提及该身份的有毒例子。
